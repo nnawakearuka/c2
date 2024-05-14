@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zooming Image</title>
+<style>
+    img {
+        transition: transform 1s ease-in-out;
+        max-width: 100%;
+    }
+</style>
+</head>
+<body>
+    <img id="zoomImg" src="https://pbs.twimg.com/profile_banners/540946060/1702688101/1500x500" alt="Zooming Image">
+    <script>
+        var img = document.getElementById("zoomImg");
+        var scale = 1;
+        setInterval(function() {
+            scale += 0.1; // 0.1ずつ大きくする
+            img.style.transform = "scale(" + scale + ")";
+        }, 1000); // 1000ミリ秒ごとに拡大
+    </script>
+</body>
+</html>
