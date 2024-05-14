@@ -17,9 +17,9 @@
         var img = document.getElementById("zoomImg");
         var scale = 1;
         setInterval(function() {
-            scale += 0.1; // 0.1ずつ大きくする
+            scale += 0.001; // 0.1ずつ大きくする
             img.style.transform = "scale(" + scale + ")";
-        }, 1000); // 1000ミリ秒ごとに拡大
+        }, 100); // 1000ミリ秒ごとに拡大
     </script>
 </body>
 </html>
